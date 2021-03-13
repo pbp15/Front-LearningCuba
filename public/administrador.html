@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=".........">
+    <meta name="author" content=".........">
+    <meta name="keyword" content="...............">
+    <link rel="shortcut icon" href="images/log1.jpg">
+    <title>Academia LearningCuba</title>
+    <!-- Icons -->
+    <link href="/src/assets/css1/plantilla.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+    <div id="app">
+        <header class="app-header navbar">
+            <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="nav navbar-nav d-md-down-none">
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Escritorio</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Configuraciones</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+             
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/avatars/user.png" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="d-md-down-none"> Usuario</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-center">
+                            <strong>Cuenta</strong>
+                        </div>
+                        <a class="dropdown-item" href="#" 
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i class="fa fa-lock"></i> Cerrar sesión</a>
+    
+                        <form id="logout-form" action="#" method="POST" style="display: none;">
+                    
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </header>
+   
+        <div class="app-body">
+      
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li @click="menu=0" class="nav-item">
+                            <a class="nav-link active" href="#"><i class="icon-speedometer"></i> Panel Administrador</a>
+                        </li>
+                        <li class="nav-title">
+                          Panel Administrador Web
+                        </li>
+            
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-wallet"></i>Blogs</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=1" class="nav-item">
+                                    <a  class="nav-link" href="#"><i class="icon-wallet"></i>Categorias</a>
+                                </li>
+                                <li @click="menu=2" class="nav-item">
+                                    <a  class="nav-link" href="#"><i class="icon-wallet"></i>Blog</a>
+                                </li>
+                            </ul>
+                        </li>
+            
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket"></i>Comunidad</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=3" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i> Eventos</a>
+                                </li>
+                                <li @click="menu=4" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i> Noticias</a>
+                                </li>
+                            </ul>
+                        </li>
+            
+                       
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-wallet"></i> Comunicados</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=5" class="nav-item">
+                                    <a  class="nav-link" href="#"><i class="icon-wallet"></i>Comunicados</a>
+                                </li>
+                            </ul>
+                        </li>
+                  
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket"></i> Testimonios</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=6" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i> Testimonio</a>
+                                </li>
+                            </ul>
+                        </li>
+            
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket"></i>Plana Docente</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=7" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i>Profesores</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket"></i>Contactanos</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=8" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i>Formulario-Contactos</a>
+                                </li>
+                                <li @click="menu=9" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i>Ficha de Admision</a>
+                                </li>
+                            </ul>
+                        </li>
+            
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-bag"></i>Acceso</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=10" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-bag"></i> Personas </a>
+                                </li>
+                                <li @click="menu=11" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-bag"></i> Roles</a>
+                                </li>
+                                <li @click="menu=12" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-bag"></i> Usuarios</a>
+                                </li>
+                             </ul>
+                        </li>
+                 
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket"></i> Configuraciones</a>
+                            <ul class="nav-dropdown-items">
+                                <li @click="menu=13" class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icon-basket-loaded"></i> Institución</a>
+                                </li>                
+                            </ul>
+                        </li>         
+                    
+                    
+                    </ul>
+                </nav>
+                <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+            </div>
+    
+        </div>
+
+    </div>
+    
+
+    <footer class="app-footer">
+        <span><a href="#">TarmaIT</a> &copy; 2021</span>
+        <span class="ml-auto">Desarrollado por <a href="#">pbp@15</a></span>
+    </footer>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="/src/assets/js1/app.js"></script>
+    <script src="/src/assets/js1/plantilla.js"></script>
+</body>
+
+</html>
