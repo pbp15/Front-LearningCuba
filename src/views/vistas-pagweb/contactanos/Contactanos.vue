@@ -1,45 +1,21 @@
+<template>
+  <div id="app">
+        <div class="main-top" id="home">
+        
+                <!-- componente social-bar -->
+                <px-social-bar />
+                <!-- componente Px header -->    
+                <px-header />
+        </div>
 
-<!DOCTYPE html>
-<html lang="">
-  <head>
-    <title>Academia LearningCuba </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Academia LearningCuba  - Escolar y Preuniversitaria" />
-    <link rel="shortcut icon" href="images/flojo.png">
+    <div class="banner_w3lspvt-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="font-weight-bold">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">Contactanos</li>
+        </ol>
+    </div>
 
-    <!-- //Meta tag Keywords -->
-
-    <!-- Custom-Files -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/estiles.css" type="text/css" />
-    <!-- Style-CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/font.css" rel="stylesheet">
-    <!-- Font-Awesome-Icons-CSS -->
-    <!-- //Custom-Files -->
-
-    <!-- Web-Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
-     rel="stylesheet">
-    <!-- //Web-Fonts -->
-  </head>
-  <body>
-  
-
-
-  {{-- resumen de entradas-section --}}
-  <div class="banner_w3lspvt-2">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html" class="font-weight-bold">Home</a></li>
-        <li class="breadcrumb-item" aria-current="page">Contactanos</li>
-    </ol>
-</div>
-{{-- fin resumen de entradas-section  --}}
-
-<div class="contact py-5" id="contact">
+    <div class="contact py-5" id="contact">
 	<div class="container pb-xl-5 pb-lg-3">
 		<div class="row">
 			<div class="col-lg-6">
@@ -103,21 +79,26 @@
 		</div>
 	</div>
 </div>
-<!-- //contact-->
 
-        
+        <px-footer />
 
-        <script>
-            addEventListener("load", function () {
-                setTimeout(hideURLbar, 0);
-            }, false);
-        
-            function hideURLbar() {
-                window.scrollTo(0, 1);
-            }
-        </script>
-        
-        
-        </body>
-</html>
+      </div>
+    
 
+</template>
+
+<script>
+import PxHeader from '@/components/partes-pagweb/PxHeader';
+import PxSocialBar from '@/components/partes-pagweb/PxSocialBar';
+import PxFooter from '@/components/partes-pagweb/PxFooter';
+
+export default {
+    name: 'Contactanos',
+        components : {
+            PxHeader,
+            PxSocialBar,
+            PxFooter
+            
+        }
+}
+</script>

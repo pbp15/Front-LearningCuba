@@ -1,5 +1,5 @@
 <template>
-  <div id="pope">
+  <div id="app">
      <!-- main banner -->
             <div class="main-top" id="home">
         
@@ -7,7 +7,7 @@
                 <px-social-bar />
                 <!-- componente Px header -->
     
-                    <px-header />
+            
                 <!-- banner -->
                     <px-banner />
                 <!-- //banner -->
@@ -32,25 +32,23 @@
             <!-- copyright bottom -->
                 <px-footer />
             <!-- //copyright bottom -->
-
-  </div>
+          </div>
 </template>
 
 <script>
 
-import PxHeader from '@/components/partes-pagweb/PxHeader';
+
 import PxSocialBar from '@/components/partes-pagweb/PxSocialBar';
 import PxBanner from '@/components/partes-pagweb/PxBanner';
 import PxSectionOfrecemos from '@/components/partes-pagweb/PxSectionOfrecemos';
 import PxSectionCiclos from '@/components/partes-pagweb/PxSectionCiclos';
 import PxSectionServicios from '@/components/partes-pagweb/PxSectionServicios';
 import PxSectionElegirnos from '@/components/partes-pagweb/PxSectionElegirnos';
-import PxFooter from '@/components/partes-pagweb/PxFooter';
+import PxFooter from '@/components/partes-pagweb/PxFooter'; 
 
 export default {
-  name: 'App',
-  components: {
-      PxHeader,
+    name: 'Pagina',
+      components: {
       PxSocialBar,
       PxBanner,
       PxSectionOfrecemos,
@@ -61,15 +59,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#pope {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 10px;
-}
-</style>
-
